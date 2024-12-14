@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThemeGPT</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 600px;
+        padding: 16px;
+        background-color: #f0f0f0;
+        margin: 0;
+      }
+      .container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 18px;
+        margin-bottom: 16px;
+        color: #333;
+      }
+      #loading,
+      #error {
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+      #error {
+        color: red;
+        display: none;
+      }
+      #themeList {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+      }
+      .theme-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        position: relative;
+        border: 2px solid transparent;
+      }
+      .theme-item:hover {
+        background-color: #f0f0f0;
+      }
+      .theme-item.selected {
+        background-color: #e0e0e0;
+        border-color: #10a37f;
+      }
+      .theme-name {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 8px;
+      }
+      .theme-screenshot {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 4px;
+        object-fit: cover;
+        /* margin-bottom: 8px; */
+        border: 1px solid #e0e0e0;
+      }
+      .theme-item.selected .theme-name {
+        font-weight: bold;
+        color: #10a37f;
+      }
+      #autoApplyContainer {
+        margin-bottom: 16px;
+      }
+      #autoApplyCheckbox {
+        margin-right: 8px;
+        cursor: pointer;
+      }
+      #autoApplyContainer label {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ThemeGPT Themes</h1>
+      <div id="autoApplyContainer">
+        <input type="checkbox" id="autoApplyCheckbox" checked />
+        <label for="autoApplyCheckbox"
+          >Automatically apply selected theme when ChatGPT is opened</label
+        >
+      </div>
+      <div id="loading">Loading themes...</div>
+      <div id="error"></div>
+      <div id="themeList"></div>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
