@@ -23,26 +23,3 @@ A Chrome extension that enhances your ChatGPT experience with beautiful, customi
 2. Click the ThemeGPT extension icon in your Chrome toolbar
 3. Select your preferred theme from the available options
 4. Enjoy your personalized ChatGPT experience!
-
-## 🎨 Available Themes
-
-- Light Theme
-- Dark Theme
-- And more...
-
-## 🤝 Contributing
-
-We welcome contributions! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- ChatGPT for their amazing platform
-- All contributors and users of ThemeGPT
-
----
-
-Made with ❤️ for the ChatGPT community
